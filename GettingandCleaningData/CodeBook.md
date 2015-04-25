@@ -21,105 +21,105 @@ The attached R script (run_analysis.R) performs the following to clean up the da
 
 * The script also appropriately labels the data set with descriptive names: all feature names (attributes) and activity names. Then mean and STD was merges the 10299 obs. x 66 variable data frame containing features with 10299x1 data frames containing activity labels and subject IDs. The result was store name mean_STD_X, a 10299 obs x 66 data. The names of the attributes are has following:
 
-	tBodyAcc-mean()-X
-	tBodyAcc-mean()-Y
-	tBodyAcc-mean()-Z
-	tBodyAcc-std()-X
-	tBodyAcc-std()-Y
-	tBodyAcc-std()-Z
+	* tBodyAcc-mean()-X
+	* tBodyAcc-mean()-Y
+	* tBodyAcc-mean()-Z
+	* tBodyAcc-std()-X
+	* tBodyAcc-std()-Y
+	* tBodyAcc-std()-Z
 
-	tGravityAcc-mean()-X
-	tGravityAcc-mean()-Y
-	tGravityAcc-mean()-Z
-	tGravityAcc-std()-X
-	tGravityAcc-std()-Y
-	tGravityAcc-std()-Z
+	* tGravityAcc-mean()-X
+	* tGravityAcc-mean()-Y
+	* tGravityAcc-mean()-Z
+	* tGravityAcc-std()-X
+	* tGravityAcc-std()-Y
+	* tGravityAcc-std()-Z
 
-	tBodyAccJerk-mean()-X
-	tBodyAccJerk-mean()-Y
-	tBodyAccJerk-mean()-Z
-	tBodyAccJerk-std()-X
-	tBodyAccJerk-std()-Y
-	tBodyAccJerk-std()-Z
+	* tBodyAccJerk-mean()-X
+	* tBodyAccJerk-mean()-Y
+	* tBodyAccJerk-mean()-Z
+	* tBodyAccJerk-std()-X
+	* tBodyAccJerk-std()-Y
+	* tBodyAccJerk-std()-Z
 
-	tBodyGyro-mean()-X
-	tBodyGyro-mean()-Y
-	tBodyGyro-mean()-Z
-	tBodyGyro-std()-X
-	tBodyGyro-std()-Y
-	tBodyGyro-std()-Z
+	* tBodyGyro-mean()-X
+	* tBodyGyro-mean()-Y
+	* tBodyGyro-mean()-Z
+	* tBodyGyro-std()-X
+	* tBodyGyro-std()-Y
+	* tBodyGyro-std()-Z
 
-	tBodyGyroJerk-mean()-X
-	tBodyGyroJerk-mean()-Y
-	tBodyGyroJerk-mean()-Z
-	tBodyGyroJerk-std()-X
-	tBodyGyroJerk-std()-Y
-	tBodyGyroJerk-std()-Z
+	* tBodyGyroJerk-mean()-X
+	* tBodyGyroJerk-mean()-Y
+	* tBodyGyroJerk-mean()-Z
+	* tBodyGyroJerk-std()-X
+	* tBodyGyroJerk-std()-Y
+	* tBodyGyroJerk-std()-Z
 
-	tBodyAccMag-mean()
-	tBodyAccMag-std()
+	* tBodyAccMag-mean()
+	* tBodyAccMag-std()
 
-	tGravityAccMag-mean()
-	tGravityAccMag-std()
+	* tGravityAccMag-mean()
+	* tGravityAccMag-std()
 
-	tBodyAccJerkMag-mean()
-	tBodyAccJerkMag-std()
+	* tBodyAccJerkMag-mean()
+	* tBodyAccJerkMag-std()
 
-	tBodyGyroMag-mean()
-	tBodyGyroMag-std()
+	* tBodyGyroMag-mean()
+	* tBodyGyroMag-std()
 
-	fBodyAcc-mean()-X
-	fBodyAcc-mean()-Y
-	fBodyAcc-mean()-Z
-	fBodyAcc-std()-X
-	fBodyAcc-std()-Y
-	fBodyAcc-std()-Z
+	* fBodyAcc-mean()-X
+	* fBodyAcc-mean()-Y
+	* fBodyAcc-mean()-Z
+	* fBodyAcc-std()-X
+	* fBodyAcc-std()-Y
+	* fBodyAcc-std()-Z
 
-	fBodyAcc-meanFreq()-X
-	fBodyAcc-meanFreq()-Y
-	fBodyAcc-meanFreq()-Z
+	* fBodyAcc-meanFreq()-X
+	* fBodyAcc-meanFreq()-Y
+	* fBodyAcc-meanFreq()-Z
 
 
-	fBodyAccJerk-mean()-X
-	fBodyAccJerk-mean()-Y
-	fBodyAccJerk-mean()-Z
-	fBodyAccJerk-std()-X
-	fBodyAccJerk-std()-Y
-	fBodyAccJerk-std()-Z
+	* fBodyAccJerk-mean()-X
+	* fBodyAccJerk-mean()-Y
+	* fBodyAccJerk-mean()-Z
+	* fBodyAccJerk-std()-X
+	* fBodyAccJerk-std()-Y
+	* fBodyAccJerk-std()-Z
 
-	fBodyAccJerk-meanFreq()-X
-	fBodyAccJerk-meanFreq()-Y
-	fBodyAccJerk-meanFreq()-Z
+	* fBodyAccJerk-meanFreq()-X
+	* fBodyAccJerk-meanFreq()-Y
+	* fBodyAccJerk-meanFreq()-Z
 
-	fBodyGyro-mean()-X
-	fBodyGyro-mean()-Y
-	fBodyGyro-mean()-Z
-	fBodyGyro-std()-X
-	fBodyGyro-std()-Y
-	fBodyGyro-std()-Z
-	fBodyGyro-meanFreq()-X
-	fBodyGyro-meanFreq()-Y
-	fBodyGyro-meanFreq()-Z
+	* fBodyGyro-mean()-X
+	* fBodyGyro-mean()-Y
+	* fBodyGyro-mean()-Z
+	* fBodyGyro-std()-X
+	* fBodyGyro-std()-Y
+	* fBodyGyro-std()-Z
+	* fBodyGyro-meanFreq()-X
+	* fBodyGyro-meanFreq()-Y
+	* fBodyGyro-meanFreq()-Z
 
-	fBodyAccMag-mean()
-	fBodyAccMag-std()
+	* fBodyAccMag-mean()
+	* fBodyAccMag-std()
 
-	fBodyBodyAccJerkMag-mean()
-	fBodyBodyAccJerkMag-std()
+	* fBodyBodyAccJerkMag-mean()
+	* fBodyBodyAccJerkMag-std()
 
-	fBodyBodyGyroMag-mean()
-	fBodyBodyGyroMag-std()
+	* fBodyBodyGyroMag-mean()
+	* fBodyBodyGyroMag-std()
 
-	fBodyBodyGyroJerkMag-mean()
-	fBodyBodyGyroJerkMag-std()
+	* fBodyBodyGyroJerkMag-mean()
+	* fBodyBodyGyroJerkMag-std()
 
-	angle(tBodyAccMean,gravity)
-	angle(tBodyAccJerkMean),gravityMean)
-	angle(tBodyGyroMean,gravityMean)
-	angle(tBodyGyroJerkMean,gravityMean)
-	angle(X,gravityMean)
-	angle(Y,gravityMean)
-	angle(Z,gravityMean)
+	* angle(tBodyAccMean,gravity)
+	* angle(tBodyAccJerkMean),gravityMean)
+	* angle(tBodyGyroMean,gravityMean)
+	* angle(tBodyGyroJerkMean,gravityMean)
+	* angle(X,gravityMean)
+	* angle(Y,gravityMean)
+	* angle(Z,gravityMean)
 
 
 ## Activity Names
