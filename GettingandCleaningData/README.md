@@ -1,4 +1,4 @@
-## Getting and Cleaning Data Course Project
+# Getting and Cleaning Data Course Project
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
@@ -21,7 +21,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 	unzip("Dataset.zip")
 
 
-# 1. Merges the training and the test sets to create one data set.
+## 1. Merges the training and the test sets to create one data set.
 
 * Merge the X_data (Train and Test) - xy -axis data from the accelerometer and gyroscope  
         
@@ -37,7 +37,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
         train_y <- read.table("UCI HAR Dataset/train/Y_train.txt")
         test_y <- read.table("UCI HAR Dataset/test/Y_test.txt")
 
-* rbind to the (test and Train) rows y data 
+* rbind to the (test and Train) combines id-rows y data 
 
         merge_ydata <- rbind(test_y, train_y )
         names(merge_ydata) <- "activity"
@@ -52,7 +52,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
         merge_subject <- rbind(test_subject, train_subject)
         names(merge_subject) <- "subjectID"
 
-# 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+## 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
         
 * Load - Features List has all the 561 Variables (columns names)
 
@@ -75,7 +75,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
         mean_STD_X <- cbind(mean_data_X, STD_data_X)
 
-# 3. Uses descriptive activity names to name the activities in the data set
+## 3. Uses descriptive activity names to name the activities in the data set
 
         activities_name_list <- read.table("UCI HAR Dataset/activity_labels.txt")
         merge_ydata[merge_ydata == 1] <- "WALKING"
@@ -85,14 +85,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
         merge_ydata[merge_ydata == 5] <- "STANDING"
         merge_ydata[merge_ydata == 6] <- "LAYING"
         
-# 4. Appropriately labels the data set with descriptive variable names. 
+## 4. Appropriately labels the data set with descriptive variable names. 
 
 * Cbind add merge_xdata, merge_ydata with all variable labels variable has 10299 obs and 562 variables all with labels variable_name is a Tidy dataset 
 
         variable_name <- cbind(merge_ydata, merge_xdata)
     
 
-# 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+## 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
         
 * Combind subjectID + activity + mean data
 

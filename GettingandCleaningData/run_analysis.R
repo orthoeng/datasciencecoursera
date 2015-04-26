@@ -86,5 +86,5 @@ library(reshape2)
         tidyData <- dcast(melted_tidyData, subjectID+activity ~ variable, mean)
 
         ## Save to a text file 
-        write.table(tidyData, file = "Tidy.txt", row.names = FALSE)
+        write.table(tidyData, file = "TidyData.txt", row.names = FALSE)
     
