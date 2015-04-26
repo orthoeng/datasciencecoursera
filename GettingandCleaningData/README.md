@@ -6,15 +6,15 @@ Here are the data for the project:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-	* You should create one R script called run_analysis.R that does the following. 
-	* Merges the training and the test sets to create one data set.
-	* Extracts only the measurements on the mean and standard deviation for each measurement. 
-	* Uses descriptive activity names to name the activities in the data set
-	* Appropriately labels the data set with descriptive variable names. 
-	* From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+	1. You should create one R script called run_analysis.R that does the following. 
+	2. Merges the training and the test sets to create one data set.
+	3. Extracts only the measurements on the mean and standard deviation for each measurement. 
+	4. Uses descriptive activity names to name the activities in the data set
+	5. Appropriately labels the data set with descriptive variable names. 
+	6. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-* Download data from website 
+* Download data files from website. Download and unzip. 
 
 	fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 	download.file(fileUrl, destfile = "Dataset.zip", method = "curl")
@@ -23,16 +23,16 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 # 1. Merges the training and the test sets to create one data set.
 
-* Merge the X_data (Train and Test)
+* Merge the X_data (Train and Test) - xy -axis data from the accelerometer and gyroscope  
         
 	train_x <- read.table("UCI HAR Dataset/train/X_train.txt")
         test_x <- read.table("UCI HAR Dataset/test/X_test.txt")
 
-* rbind to merge (test and Train) rows x data 
+* rbind to merge (test and Train) combines x-rows data to one. 
         
 	merge_xdata <- rbind(test_x, train_x)
 
-* Merge the Y_data (Train and Test)
+* Merge the Y_data (Train and Test) - ID data from the accelerometer and gyroscope 
  
         train_y <- read.table("UCI HAR Dataset/train/Y_train.txt")
         test_y <- read.table("UCI HAR Dataset/test/Y_test.txt")
