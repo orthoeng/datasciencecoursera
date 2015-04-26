@@ -23,21 +23,21 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ## 1. Merges the training and the test sets to create one data set.
 
-* Merge the X_data (Train and Test) - xy -axis data from the accelerometer and gyroscope  
+* Load text file X_train.txt and X_test.txt. Then merge the X_data (Train and Test) - XYZ -axis data from the accelerometer and gyroscope  
         
-	train_x <- read.table("UCI HAR Dataset/train/X_train.txt")
+        train_x <- read.table("UCI HAR Dataset/train/X_train.txt")
         test_x <- read.table("UCI HAR Dataset/test/X_test.txt")
 
-* rbind to merge (test and Train) combines x-rows data to one. 
+* rbind to merge the (test and Train) datasets. rdind combines x-rows data to one. 
         
-	merge_xdata <- rbind(test_x, train_x)
+        merge_xdata <- rbind(test_x, train_x)
 
-* Merge the Y_data (Train and Test) - ID data from the accelerometer and gyroscope 
+* Load text file X_train.txt and X_test.txt. Merge the Y_data (Train and Test) - ID data from the accelerometer and gyroscope 
  
         train_y <- read.table("UCI HAR Dataset/train/Y_train.txt")
         test_y <- read.table("UCI HAR Dataset/test/Y_test.txt")
 
-* rbind to the (test and Train) combines id-rows y data 
+* rbind to merge the (test and Train) datasets. rbind combines id-rows y data to one. 
 
         merge_ydata <- rbind(test_y, train_y )
         names(merge_ydata) <- "activity"
@@ -93,6 +93,8 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
     
 
 ## 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+    Using the reshape2 library, use the melt function to collapse the dataset. I create a molten dataset with the melt function, and then use the dcast function to collapse the molten set into a new collapsed and tidy data frame. Finally, I write the tidy dataset to a txt file.
         
 * Combind subjectID + activity + mean data
 
